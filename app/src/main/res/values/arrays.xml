@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="password_complexity_options">arrays.xml</string-array>
+</resources>

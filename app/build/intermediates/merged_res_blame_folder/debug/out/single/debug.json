@@ -1,0 +1,146 @@
+[
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/layout_activity_third_page.xml.flat",
+        "source": "com.example.multiple_screens_appjava.app-main-24:/layout/activity_third_page.xml"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.multiple_screens_appjava.app-main-24:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.multiple_screens_appjava.app-main-24:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/layout_activity_notes.xml.flat",
+        "source": "com.example.multiple_screens_appjava.app-main-24:/layout/activity_notes.xml"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/drawable-anydpi-v21_ic_launcher_background.xml.flat",
+        "source": "com.example.multiple_screens_appjava.app-pngs-17:/drawable-anydpi-v21/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.example.multiple_screens_appjava.app-main-24:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/layout_activity_master.xml.flat",
+        "source": "com.example.multiple_screens_appjava.app-main-24:/layout/activity_master.xml"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/drawable-xhdpi_ic_launcher_background.png.flat",
+        "source": "com.example.multiple_screens_appjava.app-pngs-17:/drawable-xhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.multiple_screens_appjava.app-main-24:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/drawable-xxhdpi_ic_launcher_background.png.flat",
+        "source": "com.example.multiple_screens_appjava.app-pngs-17:/drawable-xxhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/layout_activity_second_page.xml.flat",
+        "source": "com.example.multiple_screens_appjava.app-main-24:/layout/activity_second_page.xml"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/layout_activity_login.xml.flat",
+        "source": "com.example.multiple_screens_appjava.app-main-24:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/drawable-ldpi_ic_launcher_background.png.flat",
+        "source": "com.example.multiple_screens_appjava.app-pngs-17:/drawable-ldpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/drawable-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "com.example.multiple_screens_appjava.app-pngs-17:/drawable-xxxhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.example.multiple_screens_appjava.app-main-24:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.multiple_screens_appjava.app-main-24:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/layout_activity_passwordinheritance.xml.flat",
+        "source": "com.example.multiple_screens_appjava.app-main-24:/layout/activity_passwordinheritance.xml"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.example.multiple_screens_appjava.app-main-24:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/layout_activity_inactivitychecker.xml.flat",
+        "source": "com.example.multiple_screens_appjava.app-main-24:/layout/activity_inactivitychecker.xml"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/layout_activity_passwordenhancement.xml.flat",
+        "source": "com.example.multiple_screens_appjava.app-main-24:/layout/activity_passwordenhancement.xml"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/layout_activity_settingspage.xml.flat",
+        "source": "com.example.multiple_screens_appjava.app-main-24:/layout/activity_settingspage.xml"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.multiple_screens_appjava.app-main-24:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.example.multiple_screens_appjava.app-main-24:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.example.multiple_screens_appjava.app-main-24:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/layout_activity_twofactorauthentication.xml.flat",
+        "source": "com.example.multiple_screens_appjava.app-main-24:/layout/activity_twofactorauthentication.xml"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/layout_activity_password.xml.flat",
+        "source": "com.example.multiple_screens_appjava.app-main-24:/layout/activity_password.xml"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.example.multiple_screens_appjava.app-main-24:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.example.multiple_screens_appjava.app-pngs-17:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.example.multiple_screens_appjava.app-main-24:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/drawable-hdpi_ic_launcher_background.png.flat",
+        "source": "com.example.multiple_screens_appjava.app-pngs-17:/drawable-hdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/drawable-mdpi_ic_launcher_background.png.flat",
+        "source": "com.example.multiple_screens_appjava.app-pngs-17:/drawable-mdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/layout_activity_registration.xml.flat",
+        "source": "com.example.multiple_screens_appjava.app-main-24:/layout/activity_registration.xml"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/layout_activity_address.xml.flat",
+        "source": "com.example.multiple_screens_appjava.app-main-24:/layout/activity_address.xml"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/layout_activity_main.xml.flat",
+        "source": "com.example.multiple_screens_appjava.app-main-24:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/layout_activity_threatnotification.xml.flat",
+        "source": "com.example.multiple_screens_appjava.app-main-24:/layout/activity_threatnotification.xml"
+    },
+    {
+        "merged": "com.example.multiple_screens_appjava.app-merged_res-22:/layout_activity_security1.xml.flat",
+        "source": "com.example.multiple_screens_appjava.app-main-24:/layout/activity_security1.xml"
+    }
+]

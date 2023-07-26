@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.multiple_screens_appjava">
 
     <application
@@ -9,6 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.One_Vault_AppJava">
+        <activity android:name=".MasterPage"></activity>
+        <activity android:name=".Registration"></activity>
         <activity android:name=".ThirdPage"></activity>
         <activity android:name=".SecondPage" />
         <activity android:name=".MainActivity">
@@ -17,7 +20,18 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+
         </activity>
     </application>
+    <resources>
+        <string-array android:name="password_complexity_options">
+            <item>Easy</item>
+            <item>Medium</item>
+            <item>Hard</item>
+        </string-array>
+    </resources>
+
+
 
 </manifest>
