@@ -24,13 +24,6 @@
 
         </activity>
     </application>
-    <resources>
-        <string-array android:name="password_complexity_options">
-            <item>Easy</item>
-            <item>Medium</item>
-            <item>Hard</item>
-        </string-array>
-    </resources>
 
 
 
