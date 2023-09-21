@@ -1,5 +1,6 @@
 package com.example.multiple_screens_appjava;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -38,12 +39,7 @@ public class SettingsPage extends AppCompatActivity {
         pushNotificationCheckBox = findViewById(R.id.pushNotificationCheckBox);
         saveButton = findViewById(R.id.saveButton);
 
-        saveButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                saveForm();
-            }
-        });
+        saveButton.setOnClickListener(view -> saveForm());
     }
 
     private void saveForm() {
@@ -56,6 +52,9 @@ public class SettingsPage extends AppCompatActivity {
         String backupCodes = backupCodesEditText.getText().toString().trim();
         boolean emailNotification = emailNotificationCheckBox.isChecked();
         boolean pushNotification = pushNotificationCheckBox.isChecked();
+
+        Intent intent = new Intent(SettingsPage.this, FeaturesDashboard.class);
+        startActivity(intent);
 
         // Perform the save operation here, or any other actions based on the form data
         // For demonstration purposes, we'll just display a toast message with the form data.

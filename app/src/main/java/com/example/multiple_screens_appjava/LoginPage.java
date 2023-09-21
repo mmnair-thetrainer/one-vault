@@ -41,27 +41,21 @@ public class LoginPage extends AppCompatActivity {
         // Disable the login button initially
         loginButton.setEnabled(false);
 
-        createAccountButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Navigate to the registration page
-                Intent registrationIntent = new Intent(LoginPage.this, Registration.class);
-                startActivity(registrationIntent);
-            }
+        createAccountButton.setOnClickListener(view -> {
+            // Navigate to the registration page
+            Intent registrationIntent = new Intent(LoginPage.this, Registration.class);
+            startActivity(registrationIntent);
         });
 
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String username = usernameEditText.getText().toString().trim();
-                String password = passwordEditText.getText().toString().trim();
+        loginButton.setOnClickListener(view -> {
+            String username = usernameEditText.getText().toString().trim();
+            String password = passwordEditText.getText().toString().trim();
 
-                if (!TextUtils.isEmpty(username) && !TextUtils.isEmpty(password)) {
-                    // Perform login authentication here
-                    Toast.makeText(LoginPage.this, "Login successful!", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(LoginPage.this, "Please enter username and password!", Toast.LENGTH_SHORT).show();
-                }
+            if (!TextUtils.isEmpty(username) && !TextUtils.isEmpty(password)) {
+                // Perform login authentication here
+                Toast.makeText(LoginPage.this, "Login successful!", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(LoginPage.this, "Please enter username and password!", Toast.LENGTH_SHORT).show();
             }
         });
 

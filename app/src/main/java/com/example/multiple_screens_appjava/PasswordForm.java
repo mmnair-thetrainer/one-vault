@@ -1,5 +1,6 @@
 package com.example.multiple_screens_appjava;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -28,19 +29,9 @@ public class PasswordForm extends AppCompatActivity {
         saveButton = findViewById(R.id.saveButton);
         clearButton = findViewById(R.id.clearButton);
 
-        saveButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                savePassword();
-            }
-        });
+        saveButton.setOnClickListener(view -> savePassword());
 
-        clearButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                clearFields();
-            }
-        });
+        clearButton.setOnClickListener(view -> clearFields());
     }
 
     private void savePassword() {
@@ -58,6 +49,10 @@ public class PasswordForm extends AppCompatActivity {
 
             Toast.makeText(this, "Password saved!\n\n" + fullPasswordDetails, Toast.LENGTH_SHORT).show();
             clearFields();
+
+            // Navigate to the DashboardActivity
+            Intent intent = new Intent(PasswordForm.this, DashboardActivity.class);
+            startActivity(intent);
         }
     }
 

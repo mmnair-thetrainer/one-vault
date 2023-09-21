@@ -1,5 +1,6 @@
 package com.example.multiple_screens_appjava;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,17 +26,14 @@ public class InactivityChecker extends AppCompatActivity {
         tableLayout = findViewById(R.id.tableLayout);
         saveButton = findViewById(R.id.saveButton);
 
-        saveButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                saveForm();
-            }
-        });
+        saveButton.setOnClickListener(view -> saveForm());
     }
 
     private void saveForm() {
         // Perform the save operation here
         // For demonstration purposes, we'll just display a toast message indicating the form is saved.
         Toast.makeText(this, "Form Data Saved", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(InactivityChecker.this, FeaturesDashboard.class);
+        startActivity(intent);
     }
 }

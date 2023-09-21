@@ -1,5 +1,6 @@
 package com.example.multiple_screens_appjava;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -35,34 +36,35 @@ public class MasterPage extends AppCompatActivity {
         continueButton = findViewById(R.id.continueButton);
         backButton = findViewById(R.id.backButton);
 
-        continueButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String enteredPassword = masterPassword.getText().toString().trim();
-                if (!TextUtils.isEmpty(enteredPassword)) {
-                    int passwordStrength = calculatePasswordStrength(enteredPassword);
-                    if (passwordStrength >= 3) {
-                        // Perform necessary actions with the entered master password
-                        Toast.makeText(MasterPage.this, "Continue button clicked", Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(MasterPage.this, "Password does not meet the criteria!", Toast.LENGTH_SHORT).show();
-                    }
+        continueButton.setOnClickListener(view -> {
+            String enteredPassword = masterPassword.getText().toString().trim();
+            if (!TextUtils.isEmpty(enteredPassword)) {
+                int passwordStrength = calculatePasswordStrength(enteredPassword);
+                if (passwordStrength >= 3) {
+                    // Perform necessary actions with the entered master password
+                    navigateToDashboardActivity();
                 } else {
-                    Toast.makeText(MasterPage.this, "Please enter a valid master password!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MasterPage.this, "Password does not meet the criteria!", Toast.LENGTH_SHORT).show();
                 }
+            } else {
+                Toast.makeText(MasterPage.this, "Please enter a valid master password!", Toast.LENGTH_SHORT).show();
             }
         });
 
-
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Perform necessary actions when the back button is clicked
-                Toast.makeText(MasterPage.this, "Back button clicked", Toast.LENGTH_SHORT).show();
-            }
-        });
+        backButton.setOnClickListener(view -> navigateToLoginPage());
 
         masterPassword.addTextChangedListener(passwordWatcher);
+    }
+
+    private void navigateToDashboardActivity() {
+        Intent intent = new Intent(MasterPage.this, DashboardActivity.class);
+        startActivity(intent);
+    }
+
+    private void navigateToLoginPage() {
+       Intent intent = new Intent(MasterPage.this, LoginPage.class);
+       startActivity(intent);
+
     }
 
     private TextWatcher passwordWatcher = new TextWatcher() {

@@ -1,5 +1,6 @@
 package com.example.multiple_screens_appjava;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,18 +26,16 @@ public class PasswordInheritance extends AppCompatActivity {
         inheritToEditText = findViewById(R.id.inheritToEditText);
         inheritButton = findViewById(R.id.inheritButton);
 
-        inheritButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                inheritPassword();
-            }
-        });
+        inheritButton.setOnClickListener(view -> inheritPassword());
     }
 
     private void inheritPassword() {
         String entries = entriesEditText.getText().toString().trim();
         String inheritFrom = inheritFromEditText.getText().toString().trim();
         String inheritTo = inheritToEditText.getText().toString().trim();
+
+        Intent intent = new Intent(PasswordInheritance.this, FeaturesDashboard.class);
+        startActivity(intent);
 
         // Perform the inheritance operation here, or any other actions based on the form data
         // For demonstration purposes, we'll just display a toast message with the form data.

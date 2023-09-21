@@ -1,5 +1,6 @@
 package com.example.multiple_screens_appjava;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -28,19 +29,9 @@ public class NotesForm extends AppCompatActivity {
         saveButton = findViewById(R.id.saveButton);
         clearButton = findViewById(R.id.clearButton);
 
-        saveButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                saveNotes();
-            }
-        });
+        saveButton.setOnClickListener(view -> saveNotes());
 
-        clearButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                clearFields();
-            }
-        });
+        clearButton.setOnClickListener(view -> clearFields());
     }
 
     private void saveNotes() {
@@ -55,6 +46,10 @@ public class NotesForm extends AppCompatActivity {
             String allNotes = notes + "\nAdditional Notes: " + additionalNotes;
             Toast.makeText(this, "Notes saved!\n\n" + allNotes, Toast.LENGTH_SHORT).show();
             clearFields();
+
+            // Navigate to the DashboardActivity
+            Intent intent = new Intent(NotesForm.this, DashboardActivity.class);
+            startActivity(intent);
         }
     }
 

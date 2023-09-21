@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".FeaturesDashboard">
+
+    <Button
+        android:id="@+id/twoFactorAuthButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Two-Factor Authentication" />
+
+    <Button
+        android:id="@+id/threatNotificationButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/twoFactorAuthButton"
+        android:text="Threat Notification" />
+
+    <Button
+        android:id="@+id/passwordInheritanceButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/threatNotificationButton"
+        android:text="Password Inheritance" />
+
+    <Button
+        android:id="@+id/inactivityCheckerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordInheritanceButton"
+        android:text="Inactivity Checker" />
+
+    <Button
+        android:id="@+id/passwordEnhancementButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inactivityCheckerButton"
+        android:text="Password Enhancement" />
+
+    <Button
+        android:id="@+id/settingsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordEnhancementButton"
+        android:text="Settings" />
+
+</RelativeLayout>

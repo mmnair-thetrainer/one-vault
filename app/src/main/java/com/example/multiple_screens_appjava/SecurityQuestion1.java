@@ -26,26 +26,20 @@ public class SecurityQuestion1 extends AppCompatActivity {
         backButton = findViewById(R.id.backButton);
         nextButton = findViewById(R.id.nextButton);
 
-        nextButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String securityQuestion = securityQuestionEditText.getText().toString().trim();
+        nextButton.setOnClickListener(view -> {
+            String securityQuestion = securityQuestionEditText.getText().toString().trim();
 
-                if (securityQuestion.isEmpty()) {
-                    Toast.makeText(SecurityQuestion1.this, "Please enter a security question!", Toast.LENGTH_SHORT).show();
-                } else {
-                    // Navigate to the next screen (e.g., set up multiple questions for selected people)
-                    // Here, you can pass the securityQuestion value to the next activity if needed
-                    Toast.makeText(SecurityQuestion1.this, "Next button clicked", Toast.LENGTH_SHORT).show();
-                }
+            if (securityQuestion.isEmpty()) {
+                Toast.makeText(SecurityQuestion1.this, "Please enter a security question!", Toast.LENGTH_SHORT).show();
+            } else {
+                // Navigate to the next screen (e.g., set up multiple questions for selected people)
+                // Here, you can pass the securityQuestion value to the next activity if needed
+                Toast.makeText(SecurityQuestion1.this, "Next button clicked", Toast.LENGTH_SHORT).show();
             }
         });
 
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish(); // Go back to the previous activity (LoginPage)
-            }
+        backButton.setOnClickListener(view -> {
+            finish(); // Go back to the previous activity (LoginPage)
         });
     }
 }

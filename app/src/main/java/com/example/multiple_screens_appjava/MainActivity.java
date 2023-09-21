@@ -30,12 +30,9 @@ public class MainActivity extends AppCompatActivity {
         email = findViewById(R.id.email);
         register = findViewById(R.id.register);
 
-        register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (checkDataEntered()) {
-                    moveToRegistrationPage();
-                }
+        register.setOnClickListener(view -> {
+            if (checkDataEntered()) {
+                moveToLoginPage();
             }
         });
     }
@@ -70,8 +67,8 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    void moveToRegistrationPage() {
-        Intent intent = new Intent(MainActivity.this, MasterPage.class);
+    void moveToLoginPage() {
+        Intent intent = new Intent(MainActivity.this, LoginPage.class);
         startActivity(intent);
     }
 }

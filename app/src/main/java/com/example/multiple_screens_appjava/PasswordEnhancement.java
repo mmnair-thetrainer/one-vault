@@ -1,5 +1,6 @@
 package com.example.multiple_screens_appjava;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -44,6 +45,9 @@ public class PasswordEnhancement extends AppCompatActivity {
 
         // Perform the save operation here
         // For demonstration purposes, we'll just display a toast message indicating the form is saved.
+        Intent intent = new Intent(PasswordEnhancement.this, FeaturesDashboard.class);
+        startActivity(intent);
+
         String formData = "Password Length: " + passwordLength + "\n" +
                 "Password Complexity: " + passwordComplexity + "\n" +
                 "Caps Count: " + capsCount + "\n" +

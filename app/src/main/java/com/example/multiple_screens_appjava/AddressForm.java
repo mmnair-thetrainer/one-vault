@@ -1,5 +1,6 @@
 package com.example.multiple_screens_appjava;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -34,19 +35,9 @@ public class AddressForm extends AppCompatActivity {
         saveButton = findViewById(R.id.saveButton);
         clearButton = findViewById(R.id.clearButton);
 
-        saveButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                saveAddress();
-            }
-        });
+        saveButton.setOnClickListener(view -> saveAddress());
 
-        clearButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                clearFields();
-            }
-        });
+        clearButton.setOnClickListener(view -> clearFields());
     }
 
     private void saveAddress() {
@@ -71,6 +62,10 @@ public class AddressForm extends AppCompatActivity {
 
             Toast.makeText(this, "Address saved!\n\n" + fullAddress, Toast.LENGTH_SHORT).show();
             clearFields();
+
+            // Navigate to the DashboardActivity
+            Intent intent = new Intent(AddressForm.this, DashboardActivity.class);
+            startActivity(intent);
         }
     }
 

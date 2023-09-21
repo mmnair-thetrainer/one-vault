@@ -1,5 +1,6 @@
 package com.example.multiple_screens_appjava;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -61,6 +62,9 @@ public class ThreatNotification extends AppCompatActivity {
 
         // Perform the save operation here
         // For demonstration purposes, we'll just display a toast message indicating the form is saved.
+        Intent intent = new Intent(ThreatNotification.this, FeaturesDashboard.class);
+        startActivity(intent);
+
         String formData = "Priority Level: " + priorityLevel + "\n" +
                 "Additional Contact Information: " + additionalContactInfo;
 

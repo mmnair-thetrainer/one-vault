@@ -1,5 +1,6 @@
 package com.example.multiple_screens_appjava;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,12 +32,7 @@ public class TwoFactorAuthentication extends AppCompatActivity {
         resendOTPButton = findViewById(R.id.resendOTPButton);
         saveButton = findViewById(R.id.submitButton);
 
-        saveButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                saveForm();
-            }
-        });
+        saveButton.setOnClickListener(view -> saveForm());
     }
 
     private void saveForm() {
@@ -49,12 +45,9 @@ public class TwoFactorAuthentication extends AppCompatActivity {
         String twofaMethod = selectedRadioButton.getText().toString();
 
         // Perform the save operation here, or any other actions based on the form data
-        // For demonstration purposes, we'll just display a toast message with the form data.
-        String formData = "Username: " + username + "\n" +
-                "Password: " + password + "\n" +
-                "OTP: " + otp + "\n" +
-                "2FA Method: " + twofaMethod;
 
-        Toast.makeText(this, "Form Data Saved:\n\n" + formData, Toast.LENGTH_LONG).show();
+
+        Intent intent = new Intent(TwoFactorAuthentication.this, FeaturesDashboard.class);
+        startActivity(intent);
     }
 }
