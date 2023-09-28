@@ -55,6 +55,7 @@
         android:ems="10"
         android:inputType="text"
         android:layout_toEndOf="@id/firstNamelbl"
+        android:labelFor="@+id/firstNamelbl"
         android:layout_marginTop="16dp" />
 
     <EditText
@@ -66,6 +67,7 @@
         android:ems="10"
         android:inputType="text"
         android:layout_toEndOf="@id/lastNamelbl"
+        android:labelFor="@+id/lastNamelbl"
         android:layout_marginTop="16dp" />
 
     <EditText
@@ -77,6 +79,7 @@
         android:ems="10"
         android:inputType="textPostalAddress"
         android:layout_marginStart="53dp"
+        android:labelFor="@+id/address"
         android:layout_marginTop="16dp" />
 
     <EditText
