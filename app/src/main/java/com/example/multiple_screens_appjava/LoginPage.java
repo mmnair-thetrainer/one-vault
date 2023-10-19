@@ -39,11 +39,11 @@ public class LoginPage extends AppCompatActivity {
         loginButton = findViewById(R.id.loginButton);
 
         // Disable the login button initially
-        loginButton.setEnabled(false);
+        loginButton.setEnabled(true);
 
         createAccountButton.setOnClickListener(view -> {
             // Navigate to the Registration page
-            Intent Intent = new Intent(LoginPage.this, Registration.class);
+            Intent Intent = new Intent(LoginPage.this, MainActivity.class);
             startActivity(Intent);
         });
 
@@ -79,7 +79,7 @@ public class LoginPage extends AppCompatActivity {
             updatePasswordStrengthText(passwordStrength);
 
             // Enable the login button if the password is not empty and meets the criteria
-            loginButton.setEnabled(!TextUtils.isEmpty(password) && passwordStrength >= 3);
+            //loginButton.setEnabled(!TextUtils.isEmpty(password) && passwordStrength >= 3);
         }
     };
 
