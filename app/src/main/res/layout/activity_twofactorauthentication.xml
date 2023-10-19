@@ -8,30 +8,34 @@
     <EditText
         android:id="@+id/usernameEditText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Username" />
+        android:layout_height="48dp"
+        android:hint="Username"
+        android:padding="8dp" />
 
     <!-- Password EditText -->
     <EditText
         android:id="@+id/passwordEditText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:inputType="textPassword"
-        android:hint="Password" />
+        android:hint="Password"
+        android:padding="8dp"/>
 
     <!-- OTP EditText -->
     <EditText
         android:id="@+id/otpEditText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter OTP" />
+        android:layout_height="48dp"
+        android:hint="Enter OTP"
+        android:padding="8dp"/>
 
     <!-- Resend OTP Button -->
     <Button
         android:id="@+id/resendOTPButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Resend OTP" />
+        android:text="Resend OTP"
+        android:padding="8dp"/>
 
     <!-- 2FA Method Selection RadioGroup -->
     <RadioGroup
@@ -42,20 +46,26 @@
         <RadioButton
             android:id="@+id/biometricRadioButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Biometric" />
+            android:layout_height="48dp"
+            android:text="Biometric"
+            android:padding="8dp"
+            android:layout_marginTop="8dp"/>
 
         <RadioButton
             android:id="@+id/smsRadioButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="SMS" />
+            android:layout_height="48dp"
+            android:text="SMS"
+            android:padding="8dp"
+            android:layout_marginTop="8dp"/>
 
         <RadioButton
             android:id="@+id/emailRadioButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Email" />
+            android:layout_height="48dp"
+            android:text="Email"
+            android:padding="8dp"
+            android:layout_marginTop="8dp"/>
 
     </RadioGroup>
 

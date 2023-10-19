@@ -30,16 +30,16 @@ public class MainActivity extends AppCompatActivity {
         email = findViewById(R.id.email);
         register = findViewById(R.id.register);
 
-        register.setOnClickListener(view -> {
+        register.setOnClickListener(v -> {
             if (checkDataEntered()) {
-                moveToLoginPage();
+                moveToMasterPage();
             }
         });
     }
 
     boolean isEmail(EditText text) {
-        CharSequence email = text.getText().toString();
-        return (!TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches());
+        CharSequence emailText = text.getText().toString();
+        return (!TextUtils.isEmpty(emailText) && Patterns.EMAIL_ADDRESS.matcher(emailText).matches());
     }
 
     boolean isEmpty(EditText text) {
@@ -48,14 +48,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     boolean checkDataEntered() {
-        if (isEmpty(firstName)) {
-            Toast t = Toast.makeText(this, "You must enter a first name to register!", Toast.LENGTH_SHORT);
-            t.show();
-            return false;
-        }
-
-        if (isEmpty(lastName)) {
-            lastName.setError("Last name is required!");
+        if (isEmpty(firstName) || isEmpty(lastName) || isEmpty(email)) {
+            Toast.makeText(this, "All fields are required.", Toast.LENGTH_SHORT).show();
             return false;
         }
 
@@ -67,8 +61,8 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    void moveToLoginPage() {
-        Intent intent = new Intent(MainActivity.this, LoginPage.class);
+    void moveToMasterPage() {
+        Intent intent = new Intent(MainActivity.this, MasterPage.class);
         startActivity(intent);
     }
 }

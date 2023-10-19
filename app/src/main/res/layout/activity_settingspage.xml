@@ -13,78 +13,90 @@
     <EditText
         android:id="@+id/accountInfoEditText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:hint="Account Information"
-        android:inputType="text" />
+        android:inputType="text"
+        android:padding="8dp"/>
 
     <!-- Current Password -->
     <EditText
         android:id="@+id/currentPasswordEditText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_below="@id/accountInfoEditText"
         android:hint="Current Password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:padding="8dp"/>
 
     <!-- New Password -->
     <EditText
         android:id="@+id/newPasswordEditText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_below="@id/currentPasswordEditText"
         android:hint="New Password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:padding="8dp"/>
 
     <!-- Confirm Password -->
     <EditText
         android:id="@+id/confirmPasswordEditText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_below="@id/newPasswordEditText"
         android:hint="Confirm Password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:padding="8dp"/>
 
     <!-- Enable 2FA Checkbox -->
     <CheckBox
         android:id="@+id/enable2FAcheckbox"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_below="@id/confirmPasswordEditText"
-        android:text="Enable 2FA" />
+        android:text="Enable 2FA"
+        android:padding="8dp"
+        android:layout_marginTop="8dp"/>
 
     <!-- Secret Key -->
     <EditText
         android:id="@+id/secretKeyEditText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_below="@id/enable2FAcheckbox"
         android:hint="Secret Key"
-        android:inputType="text" />
+        android:inputType="text"
+        android:padding="8dp"/>
 
     <!-- Backup Codes -->
     <EditText
         android:id="@+id/backupCodesEditText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_below="@id/secretKeyEditText"
         android:hint="Backup Codes"
-        android:inputType="text" />
+        android:inputType="text"
+        android:padding="8dp"/>
 
     <!-- Email Notification Checkbox -->
     <CheckBox
         android:id="@+id/emailNotificationCheckBox"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_below="@id/backupCodesEditText"
-        android:text="E-mail Notification" />
+        android:text="E-mail Notification"
+        android:padding="8dp"
+        android:layout_marginTop="8dp"/>
 
     <!-- Push Notification Checkbox -->
     <CheckBox
         android:id="@+id/pushNotificationCheckBox"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_below="@id/emailNotificationCheckBox"
-        android:text="Push Notifications" />
+        android:text="Push Notifications"
+        android:padding="8dp"
+        android:layout_marginTop="8dp"/>
 
     <!-- Save Button -->
     <Button

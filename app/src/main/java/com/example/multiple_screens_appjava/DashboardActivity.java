@@ -17,12 +17,15 @@ public class DashboardActivity extends AppCompatActivity {
         Button passwordFormButton = findViewById(R.id.passwordFormButton);
         Button addressFormButton = findViewById(R.id.addressFormButton);
         Button notesFormButton = findViewById(R.id.notesFormButton);
+        Button nextButton = findViewById(R.id.nextButton);
 
         passwordFormButton.setOnClickListener(view -> openPasswordForm());
 
         addressFormButton.setOnClickListener(view -> openAddressForm());
 
         notesFormButton.setOnClickListener(view -> openNotesForm());
+
+        nextButton.setOnClickListener(view -> openFeaturesDashboard());
     }
 
     public void openPasswordForm() {
@@ -37,6 +40,10 @@ public class DashboardActivity extends AppCompatActivity {
 
     public void openNotesForm() {
         Intent intent = new Intent(DashboardActivity.this, NotesForm.class);
+        startActivity(intent);
+    }
+    public void openFeaturesDashboard() {
+        Intent intent = new Intent(DashboardActivity.this, FeaturesDashboard.class);
         startActivity(intent);
     }
 }

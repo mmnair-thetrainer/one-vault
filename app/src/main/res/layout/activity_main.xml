@@ -29,7 +29,8 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="407dp"
+        android:layout_marginEnd="178dp"
         android:text="Register" />
 
     <TextView
@@ -49,48 +50,64 @@
     <EditText
         android:id="@+id/firstName"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_below="@id/firstNamelbl"
         android:layout_alignParentEnd="true"
-        android:ems="10"
-        android:inputType="text"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="-37dp"
+        android:layout_marginEnd="-27dp"
         android:layout_toEndOf="@id/firstNamelbl"
+        android:ems="10"
+        android:hint="firstName"
+        android:inputType="text"
         android:labelFor="@+id/firstNamelbl"
-        android:layout_marginTop="16dp" />
+        android:padding="8dp" />
 
     <EditText
         android:id="@+id/lastName"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_below="@id/lastNamelbl"
         android:layout_alignParentEnd="true"
-        android:ems="10"
-        android:inputType="text"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="-37dp"
+        android:layout_marginEnd="-21dp"
         android:layout_toEndOf="@id/lastNamelbl"
+        android:ems="10"
+        android:hint="lastName"
+        android:inputType="text"
         android:labelFor="@+id/lastNamelbl"
-        android:layout_marginTop="16dp" />
+        android:padding="8dp" />
 
     <EditText
         android:id="@+id/address"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
+        android:layout_height="48dp"
         android:layout_below="@id/lastName"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="211dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="-10dp"
         android:ems="10"
+        android:hint="Address"
         android:inputType="textPostalAddress"
-        android:layout_marginStart="53dp"
         android:labelFor="@+id/address"
-        android:layout_marginTop="16dp" />
+        android:padding="8dp" />
 
     <EditText
         android:id="@+id/email"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
+        android:layout_height="48dp"
         android:layout_below="@id/address"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="202dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="-1dp"
         android:ems="10"
+        android:hint="email"
         android:inputType="textEmailAddress"
-        android:layout_marginStart="57dp"
-        android:layout_marginTop="16dp" />
+        android:padding="8dp" />
 
 </RelativeLayout>

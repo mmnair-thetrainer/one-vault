@@ -4,12 +4,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!-- Google Map View (Replace YOUR_MAP_VIEW with the correct implementation) -->
-    <com.google.android.gms.maps.MapView
-        android:id="@+id/googleMapView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1" />
 
     <!-- Priority level selection RadioGroup -->
     <RadioGroup
@@ -21,20 +15,26 @@
         <RadioButton
             android:id="@+id/lowPriorityRadioButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Low" />
+            android:layout_height="48dp"
+            android:text="Low"
+            android:padding="8dp"
+            android:layout_marginTop="8dp" />
 
         <RadioButton
             android:id="@+id/mediumPriorityRadioButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Medium" />
+            android:layout_height="48dp"
+            android:text="Medium"
+            android:padding="8dp"
+            android:layout_marginTop="8dp" />
 
         <RadioButton
             android:id="@+id/highPriorityRadioButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="High" />
+            android:layout_height="48dp"
+            android:text="High"
+            android:padding="8dp"
+            android:layout_marginTop="8dp" />
     </RadioGroup>
 
     <!-- Attachment Upload Button -->
@@ -48,8 +48,9 @@
     <EditText
         android:id="@+id/contactInfoEditText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Additional Contact Information" />
+        android:layout_height="48dp"
+        android:hint="Additional Contact Information"
+        android:padding="8dp"/>
 
     <!-- Save Button -->
     <Button

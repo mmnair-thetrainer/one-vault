@@ -42,7 +42,7 @@ public class MasterPage extends AppCompatActivity {
                 int passwordStrength = calculatePasswordStrength(enteredPassword);
                 if (passwordStrength >= 3) {
                     // Perform necessary actions with the entered master password
-                    navigateToDashboardActivity();
+                    navigateToLoginPage(); // Change to navigate to LoginPage
                 } else {
                     Toast.makeText(MasterPage.this, "Password does not meet the criteria!", Toast.LENGTH_SHORT).show();
                 }
@@ -51,19 +51,21 @@ public class MasterPage extends AppCompatActivity {
             }
         });
 
-        backButton.setOnClickListener(view -> navigateToLoginPage());
+        backButton.setOnClickListener(view -> navigateToMainActivity()); // Change to navigate to MainActivity
 
         masterPassword.addTextChangedListener(passwordWatcher);
     }
 
-    private void navigateToDashboardActivity() {
-        Intent intent = new Intent(MasterPage.this, DashboardActivity.class);
+// ...
+
+    private void navigateToLoginPage() {
+        Intent intent = new Intent(MasterPage.this, LoginPage.class);
         startActivity(intent);
     }
 
-    private void navigateToLoginPage() {
-       Intent intent = new Intent(MasterPage.this, LoginPage.class);
-       startActivity(intent);
+    private void navigateToMainActivity() {
+        Intent intent = new Intent(MasterPage.this, MainActivity.class);
+        startActivity(intent);
 
     }
 

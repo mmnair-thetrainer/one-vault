@@ -9,27 +9,31 @@
     android:paddingBottom="16dp"
     tools:context=".MainActivity">
 
+
     <LinearLayout
         android:id="@+id/loginLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+
         <EditText
             android:id="@+id/usernameEditText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:hint="Username"
             android:inputType="text"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:padding="8dp"/>
 
         <EditText
             android:id="@+id/passwordEditText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:hint="Password"
             android:inputType="textPassword"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:padding="8dp"/>
 
         <TextView
             android:id="@+id/passwordStrength"
@@ -50,6 +54,7 @@
             android:layout_height="wrap_content"
             android:text="Create Account"
             android:layout_marginTop="8dp" />
+
 
     </LinearLayout>
 

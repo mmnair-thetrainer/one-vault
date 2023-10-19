@@ -42,9 +42,9 @@ public class LoginPage extends AppCompatActivity {
         loginButton.setEnabled(false);
 
         createAccountButton.setOnClickListener(view -> {
-            // Navigate to the registration page
-            Intent registrationIntent = new Intent(LoginPage.this, Registration.class);
-            startActivity(registrationIntent);
+            // Navigate to the Registration page
+            Intent Intent = new Intent(LoginPage.this, Registration.class);
+            startActivity(Intent);
         });
 
         loginButton.setOnClickListener(view -> {
@@ -53,7 +53,8 @@ public class LoginPage extends AppCompatActivity {
 
             if (!TextUtils.isEmpty(username) && !TextUtils.isEmpty(password)) {
                 // Perform login authentication here
-                Toast.makeText(LoginPage.this, "Login successful!", Toast.LENGTH_SHORT).show();
+                // If authentication is successful, navigate to the DashboardActivity
+                navigateToDashboardActivity();
             } else {
                 Toast.makeText(LoginPage.this, "Please enter username and password!", Toast.LENGTH_SHORT).show();
             }
@@ -81,6 +82,7 @@ public class LoginPage extends AppCompatActivity {
             loginButton.setEnabled(!TextUtils.isEmpty(password) && passwordStrength >= 3);
         }
     };
+
     private int calculatePasswordStrength(String password) {
         // Criteria: More than 8 characters, a special character, at least one capital letter, a number
         int strength = 0;
@@ -140,5 +142,10 @@ public class LoginPage extends AppCompatActivity {
                 break;
         }
         this.passwordStrength.setText(strengthText);
+    }
+
+    private void navigateToDashboardActivity() {
+        Intent intent = new Intent(LoginPage.this, DashboardActivity.class);
+        startActivity(intent);
     }
 }

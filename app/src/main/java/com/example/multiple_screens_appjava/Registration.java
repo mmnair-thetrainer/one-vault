@@ -37,8 +37,8 @@ public class Registration extends AppCompatActivity {
         register.setOnClickListener(view -> {
             if (checkDataEntered()) {
                 // Data is valid, navigate to the login page
-                Intent loginIntent = new Intent(Registration.this, LoginPage.class);
-                startActivity(loginIntent);
+                Intent mainActivityIntent = new Intent(Registration.this, MainActivity.class);
+                startActivity(mainActivityIntent);
             }
         });
     }

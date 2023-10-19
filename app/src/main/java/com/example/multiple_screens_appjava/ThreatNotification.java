@@ -13,12 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ThreatNotification extends AppCompatActivity {
 
-    // You need to implement Google Maps Android SDK or any other MapView as appropriate.
-    // For demonstration purposes, let's assume you are using Google Maps Android SDK.
-    // Make sure to set the correct import and usage of the Google Map View.
-
-    // MapView googleMapView;
-
     RadioGroup priorityLevelSelectionGroup;
     RadioButton lowPriorityRadioButton;
     RadioButton mediumPriorityRadioButton;
@@ -32,8 +26,6 @@ public class ThreatNotification extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_threatnotification);
 
-        // Initialize the Google Map View
-        // googleMapView = findViewById(R.id.googleMapView);
 
         priorityLevelSelectionGroup = findViewById(R.id.priorityLevelSelectionGroup);
         lowPriorityRadioButton = findViewById(R.id.lowPriorityRadioButton);
