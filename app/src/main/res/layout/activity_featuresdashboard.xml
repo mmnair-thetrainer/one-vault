@@ -48,4 +48,10 @@
         android:layout_below="@id/passwordEnhancementButton"
         android:text="Settings" />
 
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/settingsButton"
+        android:text="Back to Dashboard" />
 </RelativeLayout>

@@ -20,6 +20,7 @@ public class FeaturesDashboard extends AppCompatActivity {
         Button inactivityCheckerButton = findViewById(R.id.inactivityCheckerButton);
         Button passwordEnhancementButton = findViewById(R.id.passwordEnhancementButton);
         Button settingsButton = findViewById(R.id.settingsButton);
+        Button backButton = findViewById(R.id.backButton);
 
         twoFactorAuthButton.setOnClickListener(view -> openTwoFactorAuthPage());
         threatNotificationButton.setOnClickListener(view -> openThreatNotificationPage());
@@ -27,6 +28,7 @@ public class FeaturesDashboard extends AppCompatActivity {
         inactivityCheckerButton.setOnClickListener(view -> openInactivityCheckerPage());
         passwordEnhancementButton.setOnClickListener(view -> openPasswordEnhancementPage());
         settingsButton.setOnClickListener(view -> openSettingsPage());
+        backButton.setOnClickListener(view -> openDashboardActivity());
     }
 
     public void openTwoFactorAuthPage() {
@@ -56,6 +58,10 @@ public class FeaturesDashboard extends AppCompatActivity {
 
     public void openSettingsPage() {
         Intent intent = new Intent(FeaturesDashboard.this, SettingsPage.class);
+        startActivity(intent);
+    }
+    public void openDashboardActivity() {
+        Intent intent = new Intent(FeaturesDashboard.this, DashboardActivity.class);
         startActivity(intent);
     }
 }

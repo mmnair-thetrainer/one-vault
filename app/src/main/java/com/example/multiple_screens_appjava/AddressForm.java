@@ -20,6 +20,7 @@ public class AddressForm extends AppCompatActivity {
     EditText countryEditText;
     Button saveButton;
     Button clearButton;
+    Button backButton; // Define the backButton
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,10 +35,16 @@ public class AddressForm extends AppCompatActivity {
         countryEditText = findViewById(R.id.countryEditText);
         saveButton = findViewById(R.id.saveButton);
         clearButton = findViewById(R.id.clearButton);
+        backButton = findViewById(R.id.backButton); // Initialize the backButton
 
         saveButton.setOnClickListener(view -> saveAddress());
-
         clearButton.setOnClickListener(view -> clearFields());
+
+        // Set a click listener for the backButton
+        backButton.setOnClickListener(view -> {
+            Intent intent = new Intent(AddressForm.this, DashboardActivity.class);
+            startActivity(intent);
+        });
     }
 
     private void saveAddress() {

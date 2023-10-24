@@ -6,6 +6,7 @@ import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -16,7 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class MasterPage extends AppCompatActivity {
+public class MasterPasswordCreation extends AppCompatActivity {
 
     LinearLayout masterPasswordLayout;
     EditText masterPassword;
@@ -24,16 +25,29 @@ public class MasterPage extends AppCompatActivity {
     Button continueButton;
     Button backButton;
 
+    CheckBox showPasswordCheckbox;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_master);
+        setContentView(R.layout.activity_masterpassword);
 
         masterPasswordLayout = findViewById(R.id.masterPasswordLayout);
         masterPassword = findViewById(R.id.masterPassword);
         passwordStrength = findViewById(R.id.passwordStrength);
         continueButton = findViewById(R.id.continueButton);
         backButton = findViewById(R.id.backButton);
+        showPasswordCheckbox = findViewById(R.id.showPasswordCheckbox); // Initialize CheckBox
+
+        showPasswordCheckbox.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) {
+                // Show password
+                masterPassword.setInputType(android.text.InputType.TYPE_CLASS_TEXT);
+            } else {
+                // Hide password
+                masterPassword.setInputType(android.text.InputType.TYPE_CLASS_TEXT | android.text.InputType.TYPE_TEXT_VARIATION_PASSWORD);
+            }
+        });
 
         continueButton.setOnClickListener(view -> {
             String enteredPassword = masterPassword.getText().toString().trim();
@@ -41,31 +55,28 @@ public class MasterPage extends AppCompatActivity {
                 int passwordStrength = calculatePasswordStrength(enteredPassword);
                 if (passwordStrength >= 3) {
                     // Perform necessary actions with the entered master password
-                    navigateToDashboardActivity(); // Change to navigate to LoginPage
+                    navigateToLoginPage();
                 } else {
-                    Toast.makeText(MasterPage.this, "Password does not meet the criteria!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MasterPasswordCreation.this, "Password does not meet the criteria!", Toast.LENGTH_SHORT).show();
                 }
             } else {
-                Toast.makeText(MasterPage.this, "Please enter a valid master password!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MasterPasswordCreation.this, "Please enter a valid master password!",Toast.LENGTH_SHORT).show();
             }
         });
 
-        backButton.setOnClickListener(view -> navigateToLoginPage()); // Change to navigate to LoginPage
+        backButton.setOnClickListener(view -> navigateToMainActivity());
 
         masterPassword.addTextChangedListener(passwordWatcher);
     }
 
-// ...
-
-    private void navigateToDashboardActivity() {
-        Intent intent = new Intent(MasterPage.this, DashboardActivity.class);
+    private void navigateToLoginPage() {
+        Intent intent = new Intent(MasterPasswordCreation.this, MasterPage.class);
         startActivity(intent);
     }
 
-    private void navigateToLoginPage() {
-        Intent intent = new Intent(MasterPage.this, LoginPage.class);
+    private void navigateToMainActivity() {
+        Intent intent = new Intent(MasterPasswordCreation.this, LoginPage.class);
         startActivity(intent);
-
     }
 
     private TextWatcher passwordWatcher = new TextWatcher() {

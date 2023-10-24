@@ -15,6 +15,7 @@ public class PasswordInheritance extends AppCompatActivity {
     EditText inheritFromEditText;
     EditText inheritToEditText;
     Button inheritButton;
+    Button backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +26,13 @@ public class PasswordInheritance extends AppCompatActivity {
         inheritFromEditText = findViewById(R.id.inheritFromEditText);
         inheritToEditText = findViewById(R.id.inheritToEditText);
         inheritButton = findViewById(R.id.inheritButton);
+        backButton = findViewById(R.id.backButton); // Initialize the backButton
 
         inheritButton.setOnClickListener(view -> inheritPassword());
+        backButton.setOnClickListener(view -> {
+            Intent intent = new Intent(PasswordInheritance.this, FeaturesDashboard.class);
+            startActivity(intent);
+        });
     }
 
     private void inheritPassword() {

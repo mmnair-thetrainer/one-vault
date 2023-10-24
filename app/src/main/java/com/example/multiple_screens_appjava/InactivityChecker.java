@@ -17,6 +17,8 @@ public class InactivityChecker extends AppCompatActivity {
     TableLayout tableLayout;
     Button saveButton;
 
+    Button backButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +29,12 @@ public class InactivityChecker extends AppCompatActivity {
         saveButton = findViewById(R.id.saveButton);
 
         saveButton.setOnClickListener(view -> saveForm());
+
+        backButton.setOnClickListener(view -> {
+            Intent intent = new Intent(InactivityChecker.this, FeaturesDashboard.class);
+            startActivity(intent);
+        });
+
     }
 
     private void saveForm() {

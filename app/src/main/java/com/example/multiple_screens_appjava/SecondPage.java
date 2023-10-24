@@ -22,7 +22,7 @@ public class SecondPage extends AppCompatActivity {
         });
 
         backButton.setOnClickListener(v -> {
-            Intent intent = new Intent(SecondPage.this, MainActivity.class);
+            Intent intent = new Intent(SecondPage.this, LoginPage.class);
             startActivity(intent);
         });
     }

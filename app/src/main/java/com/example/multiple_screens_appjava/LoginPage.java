@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -43,7 +42,7 @@ public class LoginPage extends AppCompatActivity {
 
         createAccountButton.setOnClickListener(view -> {
             // Navigate to the Registration page
-            Intent Intent = new Intent(LoginPage.this, MainActivity.class);
+            Intent Intent = new Intent(LoginPage.this, Registration.class);
             startActivity(Intent);
         });
 
@@ -54,7 +53,7 @@ public class LoginPage extends AppCompatActivity {
             if (!TextUtils.isEmpty(username) && !TextUtils.isEmpty(password)) {
                 // Perform login authentication here
                 // If authentication is successful, navigate to the DashboardActivity
-                navigateToDashboardActivity();
+                navigateToMasterPage();
             } else {
                 Toast.makeText(LoginPage.this, "Please enter username and password!", Toast.LENGTH_SHORT).show();
             }
@@ -144,8 +143,8 @@ public class LoginPage extends AppCompatActivity {
         this.passwordStrength.setText(strengthText);
     }
 
-    private void navigateToDashboardActivity() {
-        Intent intent = new Intent(LoginPage.this, DashboardActivity.class);
+    private void navigateToMasterPage() {
+        Intent intent = new Intent(LoginPage.this, MasterPage.class);
         startActivity(intent);
     }
 }

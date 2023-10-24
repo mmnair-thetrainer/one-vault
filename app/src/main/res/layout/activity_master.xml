@@ -30,7 +30,6 @@
             android:inputType="textPassword"
             android:layout_marginTop="8dp"
             android:padding="8dp"
-            android:contentDescription="Enter your master password"
             android:hint="masterPassword"/>
 
         <TextView

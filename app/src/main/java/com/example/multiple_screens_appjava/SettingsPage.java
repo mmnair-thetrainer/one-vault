@@ -23,6 +23,8 @@ public class SettingsPage extends AppCompatActivity {
     CheckBox pushNotificationCheckBox;
     Button saveButton;
 
+    Button backButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +42,7 @@ public class SettingsPage extends AppCompatActivity {
         saveButton = findViewById(R.id.saveButton);
 
         saveButton.setOnClickListener(view -> saveForm());
+        backButton.setOnClickListener(view -> navigateToFeaturesDashboard());
     }
 
     private void saveForm() {
@@ -69,5 +72,9 @@ public class SettingsPage extends AppCompatActivity {
                 "Push Notifications: " + pushNotification;
 
         Toast.makeText(this, "Form Data Saved:\n\n" + formData, Toast.LENGTH_LONG).show();
+    }
+    private void navigateToFeaturesDashboard() {
+        Intent intent = new Intent(SettingsPage.this, FeaturesDashboard.class);
+        startActivity(intent);
     }
 }

@@ -17,6 +17,7 @@ public class PasswordEnhancement extends AppCompatActivity {
     EditText specialCharacterCountEditText;
     EditText numericValueCountEditText;
     Button saveButton;
+    Button backButton; // Initialize the backButton
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,11 +31,16 @@ public class PasswordEnhancement extends AppCompatActivity {
         specialCharacterCountEditText = findViewById(R.id.specialCharacterCountEditText);
         numericValueCountEditText = findViewById(R.id.numericValueCountEditText);
         saveButton = findViewById(R.id.saveButton);
+        backButton = findViewById(R.id.backButton); // Initialize the backButton
 
         // Set the click listener for the save button
         saveButton.setOnClickListener(view -> saveForm());
-    }
 
+        backButton.setOnClickListener(view -> {
+            Intent intent = new Intent(PasswordEnhancement.this, FeaturesDashboard.class);
+            startActivity(intent);
+        });
+    }
 
     private void saveForm() {
         String passwordLength = passwordLengthEditText.getText().toString().trim();

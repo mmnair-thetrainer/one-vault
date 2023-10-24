@@ -20,6 +20,8 @@ public class TwoFactorAuthentication extends AppCompatActivity {
     Button resendOTPButton;
     Button saveButton;
 
+    Button backButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,8 +33,10 @@ public class TwoFactorAuthentication extends AppCompatActivity {
         twofaMethodSelectionGroup = findViewById(R.id.twofaMethodSelectionGroup);
         resendOTPButton = findViewById(R.id.resendOTPButton);
         saveButton = findViewById(R.id.submitButton);
+        backButton = findViewById(R.id.backButton);
 
         saveButton.setOnClickListener(view -> saveForm());
+        backButton.setOnClickListener(view -> navigateToFeaturesDashboard());
     }
 
     private void saveForm() {
@@ -47,6 +51,10 @@ public class TwoFactorAuthentication extends AppCompatActivity {
         // Perform the save operation here, or any other actions based on the form data
 
 
+        Intent intent = new Intent(TwoFactorAuthentication.this, FeaturesDashboard.class);
+        startActivity(intent);
+    }
+    private void navigateToFeaturesDashboard() {
         Intent intent = new Intent(TwoFactorAuthentication.this, FeaturesDashboard.class);
         startActivity(intent);
     }

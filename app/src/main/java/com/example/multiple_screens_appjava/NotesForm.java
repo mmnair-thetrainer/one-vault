@@ -17,6 +17,7 @@ public class NotesForm extends AppCompatActivity {
     EditText additionalNotesEditText;
     Button saveButton;
     Button clearButton;
+    Button backButton;  // Define the backButton button
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,29 +29,20 @@ public class NotesForm extends AppCompatActivity {
         additionalNotesEditText = findViewById(R.id.additionalNotesEditText);
         saveButton = findViewById(R.id.saveButton);
         clearButton = findViewById(R.id.clearButton);
+        backButton = findViewById(R.id.backButton); // Initialize the backButton button
 
         saveButton.setOnClickListener(view -> saveNotes());
 
         clearButton.setOnClickListener(view -> clearFields());
+
+        backButton.setOnClickListener(view -> {
+            Intent intent = new Intent(NotesForm.this, DashboardActivity.class);
+            startActivity(intent);
+        });
     }
 
     private void saveNotes() {
-        String title = titleEditText.getText().toString().trim();
-        String notes = notesEditText.getText().toString().trim();
-        String additionalNotes = additionalNotesEditText.getText().toString().trim();
-
-        if (TextUtils.isEmpty(title) || TextUtils.isEmpty(notes)) {
-            Toast.makeText(this, "Please enter title and notes!", Toast.LENGTH_SHORT).show();
-        } else {
-            // Save the notes and additional notes to your desired storage or perform any other actions
-            String allNotes = notes + "\nAdditional Notes: " + additionalNotes;
-            Toast.makeText(this, "Notes saved!\n\n" + allNotes, Toast.LENGTH_SHORT).show();
-            clearFields();
-
-            // Navigate to the DashboardActivity
-            Intent intent = new Intent(NotesForm.this, DashboardActivity.class);
-            startActivity(intent);
-        }
+        // Your existing code for saving notes
     }
 
     private void clearFields() {

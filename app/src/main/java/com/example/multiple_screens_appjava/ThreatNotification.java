@@ -21,11 +21,12 @@ public class ThreatNotification extends AppCompatActivity {
     EditText contactInfoEditText;
     Button saveButton;
 
+    Button backButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_threatnotification);
-
 
         priorityLevelSelectionGroup = findViewById(R.id.priorityLevelSelectionGroup);
         lowPriorityRadioButton = findViewById(R.id.lowPriorityRadioButton);
@@ -54,12 +55,17 @@ public class ThreatNotification extends AppCompatActivity {
 
         // Perform the save operation here
         // For demonstration purposes, we'll just display a toast message indicating the form is saved.
-        Intent intent = new Intent(ThreatNotification.this, FeaturesDashboard.class);
-        startActivity(intent);
-
         String formData = "Priority Level: " + priorityLevel + "\n" +
                 "Additional Contact Information: " + additionalContactInfo;
 
         Toast.makeText(this, "Form Data Saved:\n\n" + formData, Toast.LENGTH_LONG).show();
+
+        // Call the method to navigate to the FeaturesDashboard
+        navigateToFeaturesDashboard();
+    }
+
+    private void navigateToFeaturesDashboard() {
+        Intent intent = new Intent(ThreatNotification.this, FeaturesDashboard.class);
+        startActivity(intent);
     }
 }

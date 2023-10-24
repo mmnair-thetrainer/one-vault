@@ -16,7 +16,7 @@ public class ThirdPage extends AppCompatActivity {
         backButton = findViewById(R.id.button4);
 
         backButton.setOnClickListener(v -> {
-            Intent intent = new Intent(ThirdPage.this, MainActivity.class);
+            Intent intent = new Intent(ThirdPage.this, LoginPage.class);
             startActivity(intent);
         });
     }

@@ -37,7 +37,7 @@ public class Registration extends AppCompatActivity {
         register.setOnClickListener(view -> {
             if (checkDataEntered()) {
                 // Data is valid, navigate to the login page
-                Intent mainActivityIntent = new Intent(Registration.this, MainActivity.class);
+                Intent mainActivityIntent = new Intent(Registration.this, MasterPasswordCreation.class);
                 startActivity(mainActivityIntent);
             }
         });
