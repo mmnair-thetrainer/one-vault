@@ -3,6 +3,7 @@
 
     package="com.example.multiple_screens_appjava">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,21 +11,44 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.One_Vault_AppJava">
-        <activity android:name=".MasterPage"/>
-        <activity android:name=".Registration"/>
-        <activity android:name=".ThirdPage"/>
-        <activity android:name=".DashboardActivity"/>
-        <activity android:name=".PasswordForm"/>
-        <activity android:name=".AddressForm"/>
-        <activity android:name=".NotesForm"/>
-        <activity android:name=".FeaturesDashboard"/>
-        <activity android:name=".TwoFactorAuthentication"/>
-        <activity android:name=".ThreatNotification"/>
-        <activity android:name=".PasswordInheritance"/>
-        <activity android:name=".InactivityChecker"/>
-        <activity android:name=".PasswordEnhancement"/>
-        <activity android:name=".SettingsPage"/>
-        <activity android:name=".SecondPage" />
+        <activity android:name=".FeaturesDashboard">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Registration">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MasterPage"
+            android:exported="true" />
+        <activity android:name=".MasterPasswordCreation"
+            android:exported="true" />
+        <activity android:name=".ThirdPage"
+            android:exported="true" />
+        <activity android:name=".PasswordForm"
+            android:exported="true" />
+        <activity android:name=".AddressForm"
+            android:exported="true" />
+        <activity android:name=".NotesForm"
+            android:exported="true" />
+        <activity android:name=".TwoFactorAuthentication"
+            android:exported="true" />
+        <activity android:name=".ThreatNotification"
+            android:exported="true" />
+        <activity android:name=".PasswordInheritance"
+            android:exported="true" />
+        <activity android:name=".InactivityChecker"
+            android:exported="true" />
+        <activity android:name=".PasswordEnhancement"
+            android:exported="true" />
+        <activity android:name=".SettingsPage"
+            android:exported="true" />
+        <activity android:name=".SecondPage"
+            android:exported="true" />
         <activity android:name=".LoginPage"
             android:exported="true">
             <intent-filter>

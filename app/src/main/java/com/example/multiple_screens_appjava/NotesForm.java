@@ -36,7 +36,7 @@ public class NotesForm extends AppCompatActivity {
         clearButton.setOnClickListener(view -> clearFields());
 
         backButton.setOnClickListener(view -> {
-            Intent intent = new Intent(NotesForm.this, DashboardActivity.class);
+            Intent intent = new Intent(NotesForm.this, FeaturesDashboard.class);
             startActivity(intent);
         });
     }

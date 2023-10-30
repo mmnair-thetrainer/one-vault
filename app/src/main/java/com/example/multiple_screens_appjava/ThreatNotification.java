@@ -35,7 +35,6 @@ public class ThreatNotification extends AppCompatActivity {
         attachmentUploadButton = findViewById(R.id.attachmentUploadButton);
         contactInfoEditText = findViewById(R.id.contactInfoEditText);
         saveButton = findViewById(R.id.saveButton);
-
         saveButton.setOnClickListener(view -> saveForm());
     }
 

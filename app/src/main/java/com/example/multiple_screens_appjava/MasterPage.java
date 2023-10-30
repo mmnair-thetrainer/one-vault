@@ -58,7 +58,7 @@ public class MasterPage extends AppCompatActivity {
 // ...
 
     private void navigateToDashboardActivity() {
-        Intent intent = new Intent(MasterPage.this, DashboardActivity.class);
+        Intent intent = new Intent(MasterPage.this, FeaturesDashboard.class);
         startActivity(intent);
     }
 

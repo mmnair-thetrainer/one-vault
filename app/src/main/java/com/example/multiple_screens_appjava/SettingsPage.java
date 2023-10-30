@@ -40,6 +40,7 @@ public class SettingsPage extends AppCompatActivity {
         emailNotificationCheckBox = findViewById(R.id.emailNotificationCheckBox);
         pushNotificationCheckBox = findViewById(R.id.pushNotificationCheckBox);
         saveButton = findViewById(R.id.saveButton);
+        backButton = findViewById(R.id.backButton);
 
         saveButton.setOnClickListener(view -> saveForm());
         backButton.setOnClickListener(view -> navigateToFeaturesDashboard());

@@ -27,7 +27,7 @@ public class InactivityChecker extends AppCompatActivity {
         lastLoginTimeTextView = findViewById(R.id.lastLoginTimeTextView);
         tableLayout = findViewById(R.id.tableLayout);
         saveButton = findViewById(R.id.saveButton);
-
+        backButton = findViewById(R.id.backButton);
         saveButton.setOnClickListener(view -> saveForm());
 
         backButton.setOnClickListener(view -> {

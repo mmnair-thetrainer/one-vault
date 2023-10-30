@@ -36,7 +36,7 @@ public class PasswordForm extends AppCompatActivity {
         clearButton.setOnClickListener(view -> clearFields());
 
         backButton.setOnClickListener(view -> {
-            Intent intent = new Intent(PasswordForm.this, DashboardActivity.class);
+            Intent intent = new Intent(PasswordForm.this, FeaturesDashboard.class);
             startActivity(intent);
         });
     }

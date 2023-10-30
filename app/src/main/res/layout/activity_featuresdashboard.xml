@@ -1,57 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp"
-    tools:context=".FeaturesDashboard">
 
-    <Button
-        android:id="@+id/twoFactorAuthButton"
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Two-Factor Authentication" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <Button
-        android:id="@+id/threatNotificationButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/twoFactorAuthButton"
-        android:text="Threat Notification" />
+        <Button
+            android:id="@+id/twoFactorAuthButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Two-Factor Authentication" />
 
-    <Button
-        android:id="@+id/passwordInheritanceButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/threatNotificationButton"
-        android:text="Password Inheritance" />
+        <Button
+            android:id="@+id/threatNotificationButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Threat Notification" />
 
-    <Button
-        android:id="@+id/inactivityCheckerButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/passwordInheritanceButton"
-        android:text="Inactivity Checker" />
+        <Button
+            android:id="@+id/passwordInheritanceButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Password Inheritance" />
 
-    <Button
-        android:id="@+id/passwordEnhancementButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/inactivityCheckerButton"
-        android:text="Password Enhancement" />
+        <Button
+            android:id="@+id/inactivityCheckerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inactivity Checker" />
 
-    <Button
-        android:id="@+id/settingsButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/passwordEnhancementButton"
-        android:text="Settings" />
+        <Button
+            android:id="@+id/passwordEnhancementButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Password Enhancement" />
 
-    <Button
-        android:id="@+id/backButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/settingsButton"
-        android:text="Back to Dashboard" />
-</RelativeLayout>
+        <Button
+            android:id="@+id/settingsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Settings" />
+
+        <Button
+            android:id="@+id/passwordFormButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Password Form" />
+
+        <Button
+            android:id="@+id/notesFormButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Notes Form" />
+
+        <Button
+            android:id="@+id/addressFormButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Address Form" />
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back to Dashboard" />
+    </LinearLayout>

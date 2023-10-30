@@ -42,7 +42,7 @@ public class AddressForm extends AppCompatActivity {
 
         // Set a click listener for the backButton
         backButton.setOnClickListener(view -> {
-            Intent intent = new Intent(AddressForm.this, DashboardActivity.class);
+            Intent intent = new Intent(AddressForm.this, FeaturesDashboard.class);
             startActivity(intent);
         });
     }
@@ -71,7 +71,7 @@ public class AddressForm extends AppCompatActivity {
             clearFields();
 
             // Navigate to the DashboardActivity
-            Intent intent = new Intent(AddressForm.this, DashboardActivity.class);
+            Intent intent = new Intent(AddressForm.this, FeaturesDashboard.class);
             startActivity(intent);
         }
     }

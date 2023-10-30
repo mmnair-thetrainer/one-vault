@@ -10,6 +10,11 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -51,11 +56,39 @@ public class LoginPage extends AppCompatActivity {
             String password = passwordEditText.getText().toString().trim();
 
             if (!TextUtils.isEmpty(username) && !TextUtils.isEmpty(password)) {
-                // Perform login authentication here
-                // If authentication is successful, navigate to the DashboardActivity
-                navigateToMasterPage();
+                // Send the username and password to your server for authentication
+                new Thread(() -> {
+                    try {
+                        // Load the MySQL JDBC driver class dynamically at runtime
+                        Class.forName("com.mysql.jdbc.Driver");
+
+                        // Establish a connection to a MySQL database using the JDBC driver
+                        Connection con = DriverManager.getConnection("jdbc:mysql://your_server:3306/your_database", "your_username", "your_password");
+
+                        String query = "SELECT password FROM users WHERE user_name = ?";
+                        PreparedStatement stmt = con.prepareStatement(query);
+                        stmt.setString(1, username);
+
+                        ResultSet rs = stmt.executeQuery();
+                        boolean exists = rs.next();
+
+                        runOnUiThread(() -> {
+                            if (exists) {
+                                Toast.makeText(getApplicationContext(), "Login successful", Toast.LENGTH_SHORT).show();
+                                // Redirect to the dashboard or another activity
+                            } else {
+                                Toast.makeText(getApplicationContext(), "Invalid username or password", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
+                        con.close();
+
+                    } catch (SQLException | ClassNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                }).start();
             } else {
-                Toast.makeText(LoginPage.this, "Please enter username and password!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Please enter a valid username and password", Toast.LENGTH_SHORT).show();
             }
         });
 
