@@ -71,7 +71,7 @@ public class Registration extends AppCompatActivity {
         // Add a click listener for the "Back" button
         back.setOnClickListener(view -> {
             // Handle navigation back to the previous activity (e.g., FeaturesDashboard)
-            Intent backIntent = new Intent(Registration.this, FeaturesDashboard.class);
+            Intent backIntent = new Intent(Registration.this, LoginPage.class);
             startActivity(backIntent);
         });
 
@@ -178,13 +178,13 @@ public class Registration extends AppCompatActivity {
 
             try {
                 // Register the JDBC driver
-                Class.forName("com.mysql.cj.jdbc.Driver"); // Use "com.mysql.cj.jdbc.Driver" for MySQL 8
+                Class.forName("com.mysql.jdbc.Driver");
 
                 // Open a connection to the database
                 connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
 
                 // Define an SQL INSERT statement (adjust it based on your database table structure)
-                String sql = "users (username, password, date_of_birth, email) VALUES (?, ?, ?, ?)";
+                String sql = "users (user_name, password, date_of_birth, email) VALUES (?, ?, ?, ?)";
 
                 // Prepare the statement
                 PreparedStatement preparedStatement = connection.prepareStatement(sql);

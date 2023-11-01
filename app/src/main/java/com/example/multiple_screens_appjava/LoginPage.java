@@ -60,30 +60,50 @@ public class LoginPage extends AppCompatActivity {
                 new Thread(() -> {
                     try {
                         // Load the MySQL JDBC driver class dynamically at runtime
-                        Class.forName("com.mysql.jdbc.Driver");
+                        try {
+                            Class.forName("com.mysql.jdbc.Driver"); // Use "com.mysql.cj.jdbc.Driver" for MySQL 8
+                        } catch (ClassNotFoundException e) {
+                            e.printStackTrace();
+                        }
 
                         // Establish a connection to a MySQL database using the JDBC driver
-                        Connection con = DriverManager.getConnection("jdbc:mysql://your_server:3306/your_database", "your_username", "your_password");
+                        Connection con = null;
 
-                        String query = "SELECT password FROM users WHERE user_name = ?";
-                        PreparedStatement stmt = con.prepareStatement(query);
-                        stmt.setString(1, username);
+                        try {
+                            String dbUrl = "jdbc:mysql://192.168.1.36:3306/one_vault_01";
+                            String dbUser = "root";
+                            String dbPassword = "";
 
-                        ResultSet rs = stmt.executeQuery();
-                        boolean exists = rs.next();
+                            con = DriverManager.getConnection(dbUrl, dbUser, dbPassword);
 
-                        runOnUiThread(() -> {
-                            if (exists) {
-                                Toast.makeText(getApplicationContext(), "Login successful", Toast.LENGTH_SHORT).show();
-                                // Redirect to the dashboard or another activity
-                            } else {
-                                Toast.makeText(getApplicationContext(), "Invalid username or password", Toast.LENGTH_SHORT).show();
+                            String query = "SELECT password FROM users WHERE username = ?";
+                            PreparedStatement stmt = con.prepareStatement(query);
+                            stmt.setString(1, username);
+
+                            ResultSet rs = stmt.executeQuery();
+                            boolean exists = rs.next();
+
+                            runOnUiThread(() -> {
+                                if (exists) {
+                                    // Login successful, navigate to MasterPasswordCreation
+                                    Toast.makeText(getApplicationContext(), "Login successful", Toast.LENGTH_SHORT).show();
+                                    navigateToMasterPasswordCreation(); // Add this line
+                                } else {
+                                    Toast.makeText(getApplicationContext(), "Invalid username or password", Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                        } catch (SQLException e) {
+                            e.printStackTrace();
+                        } finally {
+                            if (con != null) {
+                                try {
+                                    con.close();
+                                } catch (SQLException e) {
+                                    e.printStackTrace();
+                                }
                             }
-                        });
-
-                        con.close();
-
-                    } catch (SQLException | ClassNotFoundException e) {
+                        }
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }).start();
@@ -176,8 +196,8 @@ public class LoginPage extends AppCompatActivity {
         this.passwordStrength.setText(strengthText);
     }
 
-    private void navigateToMasterPage() {
-        Intent intent = new Intent(LoginPage.this, MasterPage.class);
+    private void navigateToMasterPasswordCreation() {
+        Intent intent = new Intent(LoginPage.this, MasterPasswordCreation.class);
         startActivity(intent);
     }
 }

@@ -7,6 +7,24 @@
         android:orientation="vertical"
         android:padding="16dp">
 
+    <Button
+        android:id="@+id/passwordFormButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Password Form" />
+
+    <Button
+        android:id="@+id/notesFormButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notes Form" />
+
+    <Button
+        android:id="@+id/addressFormButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Address Form" />
+
         <Button
             android:id="@+id/twoFactorAuthButton"
             android:layout_width="match_parent"
@@ -43,27 +61,11 @@
             android:layout_height="wrap_content"
             android:text="Settings" />
 
-        <Button
-            android:id="@+id/passwordFormButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Password Form" />
 
-        <Button
-            android:id="@+id/notesFormButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Notes Form" />
-
-        <Button
-            android:id="@+id/addressFormButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Address Form" />
 
         <Button
             android:id="@+id/backButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Back to Dashboard" />
+            android:text="Back" />
     </LinearLayout>
